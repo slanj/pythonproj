@@ -6,4 +6,5 @@ def hello(name = "Nikifor"):
     print(greet)
     return greet
 
+hello()
 hello("Peter")
