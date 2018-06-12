@@ -17,5 +17,5 @@ def Towers(n, fr, to, spare):
 
         print('Done with', str(n), 'scope')
 
-Towers(4, "P1", "P2", "P3")
+Towers(3, "P1", "P2", "P3")
 
