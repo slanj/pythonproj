@@ -1,3 +1,4 @@
+# Tuples sre immutable
 te = (2, "some", 42)
 answer = te[2]
 
