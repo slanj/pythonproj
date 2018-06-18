@@ -18,6 +18,17 @@ for i in nums:
 
 print(total)
 
+# If you copy a list - you create a new name for a same object (aliasing)
+first_list = [22, 33, 44]
+second_list = first_list
+second_list.append(55)
+print(first_list)
+
+# Create a new list and copy every element (cloning)
+third_list = second_list[:]
+second_list.append(66)
+print(third_list)
+
 # List operations
 
 # Add elements to the end of the list
