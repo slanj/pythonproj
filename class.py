@@ -3,10 +3,10 @@ class Coordinate(object):
         self.x = x
         self.y = y
     def distance(self, other):
-        import math
+        from math import sqrt
         x_diff_sq = (self.x - other.x)**2
         y_diff_sq = (self.y - other.y)**2
-        dist = math.sqrt(x_diff_sq + y_diff_sq)
+        dist = sqrt(x_diff_sq + y_diff_sq)
         return dist
 
 c = Coordinate(3, 4)
