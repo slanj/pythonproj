@@ -65,7 +65,7 @@ print(l)
 l = s.split('e')
 print(l)
 
-# Join list of characters into a list
+# Join list of characters into a string
 s2 = 'e'.join(l)
 print(s2)
 
