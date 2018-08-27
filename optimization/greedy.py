@@ -48,23 +48,17 @@ def testGreedy(items, constraint, keyFunction):
     for item in taken:
         print('     ', item)
 
-def testGreedys(maxUnits):
+def testGreedys(foods, maxUnits):
     print("Use greedy by joy to allocate ", maxUnits, ' calories')
-    testGreedy(mymenu, maxUnits, Food.getValue)
+    testGreedy(foods, maxUnits, Food.getValue)
 
     print('\nUse greedy by calories to allocate ', maxUnits, ' calories')
-    testGreedy(mymenu, maxUnits, lambda x: 1/Food.getCost(x))
+    testGreedy(foods, maxUnits, lambda x: 1/Food.getCost(x))
 
     print('\nUse greedy by density to allocate ', maxUnits, ' calories')
-    testGreedy(mymenu, maxUnits, Food.density)
+    testGreedy(foods, maxUnits, Food.density)
 
 
-mymenu = buildMenu(['apple', 'burger', 'potato', 'carrot'], [42, 39, 2, 15], [88, 100500, 15, 8])
-
-for item in mymenu:
-    print(item)
-
-testGreedys(90)
 
 
 
