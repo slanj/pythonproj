@@ -20,5 +20,5 @@ def buildCityGraph():
 
     return g
 
-
-print(buildCityGraph())
+if __name__ == "__main__":
+    print(buildCityGraph())
