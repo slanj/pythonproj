@@ -1,6 +1,6 @@
 import random
 '''
-random - returns time in milliseconds since January 1, 1968.
+random - uses time in milliseconds since January 1, 1968.
 That is called seed generating
 Given a seed you always get the same sequence
 '''
