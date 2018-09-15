@@ -136,7 +136,8 @@ def simAll(drunkKinds, walkLengths, numTrials):
 
 #drunkTest([10, 100, 1000, 10000], 100, UsualDrunk)
 
-simAll((UsualDrunk, ColdDrunk), (1, 10, 100, 1000, 10000), 100)
+if __name__ == "__main__":
+    simAll((UsualDrunk, ColdDrunk), (1, 10, 100, 1000, 10000), 100)
 
 
 
