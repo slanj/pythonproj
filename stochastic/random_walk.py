@@ -134,6 +134,39 @@ def simAll(drunkKinds, walkLengths, numTrials):
     for dClass in drunkKinds:
         drunkTest(walkLengths, numTrials, dClass)
 
+
+def getFinalLocs(numSteps, numTrials, dClass):
+    locs = []
+    d = dClass("Petro")
+    for t in range(numTrials):
+        f = Field()
+        f.addDrunk(d, Location(0, 0))
+        for s in range(numSteps):
+            f.moveDrunk(d)
+        locs.append(f.getLoc(d))
+    return locs
+
+class OddField(Field):
+    def __init__(self, numHoles = 1000,
+                 xRange = 100, yRange = 100):
+        Field.__init__(self)
+        self.wormholes = {}
+        for w in range(numHoles):
+            x = random.randint(-xRange, xRange)
+            y = random.randint(-yRange, yRange)
+            newX = random.randint(-xRange, xRange)
+            newY = random.randint(-yRange, yRange)
+            newLoc = Location(newX, newY)
+            self.wormholes[(x, y)] = newLoc
+
+    def moveDrunk(self, drunk):
+        Field.moveDrunk(self, drunk)
+        x = self.drunks[drunk].getX()
+        y = self.drunks[drunk].getY()
+        if (x, y) in self.wormholes:
+            self.drunks[drunk] = self.wormholes[(x, y)]
+
+
 #drunkTest([10, 100, 1000, 10000], 100, UsualDrunk)
 
 if __name__ == "__main__":
