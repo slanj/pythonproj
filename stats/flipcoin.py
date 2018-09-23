@@ -50,9 +50,9 @@ def clt():
 
 clt()
 pylab.figure(1)
-#pylab.errorbar(sampleSizes, meanOfMeans,
-#               yerr = 1.96*pylab.array(stdOfMeans),
-#               label = "Est. mean and 95 confidence interval")
+pylab.errorbar(sampleSizes, meanOfMeans,
+               yerr = 1.96*pylab.array(stdOfMeans),
+               label = "Est. mean and 95 confidence interval")
 pylab.xlim(0, max(sampleSizes) + 50)
 pylab.axhline(0.65, linestyle = '--',
               label = 'True probability of Heads')
