@@ -57,7 +57,7 @@ print("Test set Accuracy: ", metrics.accuracy_score(y_test, yhat))
 Ks = 10
 mean_acc = np.zeros((Ks-1))
 std_acc = np.zeros((Ks-1))
-ConfustionMx = [];
+ConfustionMx = []
 for n in range(1,Ks):
 
     #Train Model and Predict
