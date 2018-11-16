@@ -141,7 +141,7 @@ print(M.sum(axis=0)) # sum for every column
 print(M.sum(axis=1)) # sum for every row
 # [1.91574394 1.81144783 1.71020896]
 
-print(M.std(axis = 0)) # standard deviation for every row
+print(M.std(axis = 0)) # standard deviation for every column
 # [0.16958465 0.09470688 0.15676532 0.31622955]
 
 print(M.argmax()) # index of maximum element
