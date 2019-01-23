@@ -51,6 +51,7 @@ print ('Coefficients mutiple: ', regr_mult.coef_)
 
 
 from sklearn.metrics import r2_score
+from sklearn.metrics import mean_squared_error
 
 test_x = np.asanyarray(test[['ENGINESIZE']])
 test_y = np.asanyarray(test[['CO2EMISSIONS']])
@@ -68,5 +69,6 @@ test_y_mult = np.asanyarray(test[['CO2EMISSIONS']])
 
 print("Residual sum of squares for multiple regression: %.2f"
       % np.mean((test_y_hat - test_y_mult) ** 2))
+print("Scikit MSE: %.2f" % mean_squared_error(test_y_mult, test_y_hat))
 # Explained variance score: 1 is perfect prediction
 print('Variance score: %.2f' % regr_mult.score(test_x_mult, test_y_mult))
